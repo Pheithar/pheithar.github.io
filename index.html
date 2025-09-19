@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="public/images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="public/images/favicon.png" type="image/png">
+
+  <title>Alejandro Valverde Mahou</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #90bcffa1;
+      color: #333;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      background: #428dff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      margin: 0.5rem 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0.25rem 0;
+    }
+    .profile-summary {
+    max-width: 720px;
+    margin: 0.9rem auto 0; /* space below header */
+    padding: 0.6rem 0.8rem;
+    color: inherit; /* inherits from the page (use white on blue background) */
+    }
+
+    .profile-summary .bio {
+      margin: 0 0 0.6rem 0;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+
+    .profile-summary a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+    }
+
+    .profile-summary .interests {
+      margin: 0 0 0.6rem 0;
+      font-size: 0.95rem;
+    }
+
+    .profile-summary .tag {
+      display: inline-block;
+      margin: 0 0.35rem 0 0;
+      padding: 0.18rem 0.45rem;
+      font-size: 0.85rem;
+      border-radius: 999px;
+      background: #8eff4246; /* subtle pill */
+      color: inherit;
+      border: 1px solid #8eff4291;
+    }
+
+    .contact {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .contact-item {
+      margin-right: 1.5rem; /* space between items */
+    }
+
+
+    section {
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: auto;
+    }
+
+    section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ccc;
+    display: inline-block;
+    color: white; /* adjust if background is blue */
+    }
+
+    .paper {
+    display: flex;
+    align-items: flex-start;
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .paper img {
+    width: 120px;
+    height: auto;
+    border-radius: 6px;
+    margin-right: 1rem;
+    object-fit: cover;
+    }
+
+    .paper-details {
+    flex: 1;
+    }
+
+    .paper-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 0.3rem;
+    }
+
+    .paper-authors {
+    margin: 0 0 0.3rem;
+    font-size: 0.95rem;
+    color: #666;
+    }
+
+    .paper-venue {
+    margin: 0 0 0.8rem;
+    font-style: italic;
+    color: #444;
+    }
+
+    .paper-abstract {
+    margin: 0 0 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    }
+
+    .paper a {
+    margin-right: 10px;
+    }
+    a {
+      color: #FFB442;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Section 1: Profile -->
+  <header>
+    <img src="public/images/profile.jpg" alt="Profile Picture">
+    <h1>Alejandro Valverde Mahou</h1>
+    <p>PhD Student in Machine Learning</p>
+    <div class="profile-summary" role="region" aria-label="Short bio">
+      <p class="bio">
+        I am a PhD student in <b>A</b>, supervised by <b>Georgios Arvanitidis</b> and <b>Søren Hauberg</b>, and a member of the 
+        <a href="https://orbit.dtu.dk/en/projects/i-rase-intelligent-radiation-sensor-readout-systems/publications/" target="_blank" rel="noopener noreferrer">i-RASE project</a>. 
+        My research explores how machine learning can improve photon-matter interaction position detection.
+      </p>
+
+      <p class="interests">
+        Research interests: 
+        <br> 
+        <span class="tag">Physics-Informed ML</span>
+        <span class="tag">Differentiable Simulators</span>
+        <span class="tag">PINNs</span>
+        <span class="tag">AI4Science</span>
+      </p>
+
+    </div>
+  
+    <div class="contact">
+      <p>
+        <span class="contact-item">Email: <b>avama[at]dtu.dk</b></span>
+        <span class="contact-item"><a href="https://scholar.google.com/citations?user=wm9wdSkAAAAJ&hl=en" target="_blank">Google Scholar</a></span>
+        <span class="contact-item">GitHub: <a href="https://github.com/Pheithar" target="_blank">Pheithar</a></span>
+      </p>
+    </div>
+  </header>
+
+  <!-- Section 2: Highlighted Papers -->
+  <!-- <section>
+    <h2>Highlighted Papers</h2>
+
+    <div class="paper">
+        <img src="public/images/paper1-thumb.jpg" alt="Paper thumbnail">
+        <div class="paper-details">
+        <p class="paper-title">Title of Paper One</p>
+        <p class="paper-authors">Jane Doe, John Smith, Your Name</p>
+        <p class="paper-venue"><em>Conference on Example Research, 2024</em></p>
+        <p class="paper-abstract">
+            This paper explores novel approaches to XYZ. We show that our method outperforms baselines
+            in both speed and accuracy across multiple datasets.
+        </p>
+        <p>
+            <a href="link-to-paper.pdf" target="_blank">[PDF]</a> 
+            <a href="doi-link" target="_blank">[DOI]</a>
+        </p>
+        </div>
+    </div>
+
+    <div class="paper">
+        <img src="public/images/paper2-thumb.jpg" alt="Paper thumbnail">
+        <div class="paper-details">
+        <p class="paper-title">Title of Paper Two</p>
+        <p class="paper-authors">Your Name, Coauthor Name</p>
+        <p class="paper-venue"><em>Journal of Great Ideas, 2023</em></p>
+        <p class="paper-abstract">
+            We introduce a framework for ABC that simplifies deployment and improves reproducibility.
+        </p>
+        <p>
+            <a href="link-to-paper.pdf" target="_blank">[PDF]</a>
+        </p>
+        </div>
+    </div>
+    </section> -->
+
+</body>
+</html>
